@@ -14,6 +14,9 @@ var winCount = 0;
 var lossCount = 0;
 var guessesLeft = 10;
 
+//sound
+var sound = document.getElementById('sound')
+
 // Functions (Reusable blocks of code)
 //----------------------------------------------
 
@@ -25,9 +28,9 @@ function startGame () {
 
     //reset
     
-    guessesLeft = 10; //each new game only 9 guesses
+    guessesLeft = 10; //each new game only 10 guesses
     wrongLetters = []; //number of guess is back to zero
-    blanksAndSuccesses = []; // blanks are back to zer
+    blanksAndSuccesses = []; // blanks are back to zero
 
     //populate blanks and successes with right number of blanks using a for loop
     for (var i = 0; i < numBlanks; i++) {
@@ -90,7 +93,7 @@ function roundComplete() {
     if (lettersInWord.toString() == blanksAndSuccesses.toString()) { //toString converts a number to a string
         winCount++;
         alert("You Guessed Correctly! The City Was: " + selectedWord);
-
+        playAudio ()
         //update win counter in HTML
         document.getElementById("winCount").innerHTML = winCount;
         
