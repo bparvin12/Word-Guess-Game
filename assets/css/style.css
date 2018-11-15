@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.jumbotron {
+    background-color: lightskyblue;
+    font-weight: bold;
+}
+
+.panel-heading {
+    background-color: darkgray;
+    /* border: 2px solid black; */
+}
+
+.panel-body {
+    background-color: #dedede;
+    /* border: 1px solid black; */
+}
+
+
