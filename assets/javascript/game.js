@@ -15,7 +15,7 @@ var lossCount = 0;
 var guessesLeft = 10;
 
 //sound
-var sound = document.getElementById('sound')
+// var sound = document.getElementById('sound')
 
 // Functions (Reusable blocks of code)
 //----------------------------------------------
@@ -42,7 +42,7 @@ function startGame () {
     document.getElementById("numGuesses").innerHTML = guessesLeft;
     document.getElementById("winCount").innerHTML = winCount;
     document.getElementById("lossCount").innerHTML = lossCount;
-    document.getElementById("wrongGuesses").innerHTML = " "
+    document.getElementById("wrongGuesses").innerHTML = " ";
     
     //testing/debugging
     console.log(selectedWord);
@@ -73,7 +73,7 @@ function checkLetters(letter) {
     //letter wasn't found 
     else {
         wrongLetters.push(letter);
-        guessesLeft--
+        guessesLeft--;
     }
 
     //testing/debugging
@@ -93,7 +93,7 @@ function roundComplete() {
     if (lettersInWord.toString() == blanksAndSuccesses.toString()) { //toString converts a number to a string
         winCount++;
         alert("You Guessed Correctly! The City Was: " + selectedWord);
-        playAudio ()
+        // playAudio(sound);
         //update win counter in HTML
         document.getElementById("winCount").innerHTML = winCount;
         
